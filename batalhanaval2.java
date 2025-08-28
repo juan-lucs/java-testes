@@ -105,7 +105,7 @@ class Navio {
 
 
 class AuxiliarJogo {
-    }
+    
     // private = é só acessível dentro de AuxiliarJogo, outras classes não podem mexer nele diretamente.
     // final = significa que o valor não pode ser alterado depois de inicializado
     // static = Todos os objetos compartilham o mesmo valor.
@@ -255,4 +255,4 @@ class AuxiliarJogo {
             return INCREMENTO_VERTICAL;
         }
     }
-
+}
