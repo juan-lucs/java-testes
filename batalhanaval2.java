@@ -223,6 +223,7 @@ class AuxiliarJogo {
         for (int indice : coordenadasNavio) {
             String coordenadaAlpha = getCoordenadaAlpha(indice);
             celulasAlpha.add(coordenadaAlpha);
+            System.out.println(coordenadaAlpha);
         }
         return celulasAlpha;
     }
