@@ -37,7 +37,7 @@ public class Crud {
         String senha = sc.nextLine();
         boolean a = nomes.contains(nome);
         boolean b = senhas.contains(senha);
-        if (a == true || b == true) {
+        if (a == true && b == true) {
             Dentro(nome, senha);
         } else {
             System.out.println("Nome ou senha incorretos");
@@ -81,19 +81,23 @@ public class Crud {
         System.exit(0);
     }
 
-    public static void main(String[] args) {
-        Crud e = new Crud();
-        Scanner sc = new Scanner(System.in);
+    private void Inicio() {
         System.out.println("Digite 1 caso queira entrar na sua conta. \n\n Digite 2 para se registrar \n\n Digite 3 para sair.");
         int i = sc.nextInt();
         
         if (i == 1){
-            e.Entrar();
+            Entrar();
         } else if (i == 2){
-            e.Criar();
+            Criar();
         } else if (i == 3) {
-            e.Fechar();
+            Fechar();
         }
         sc.close();
     }
+    
+
+    public static void main(String[] args) {
+        Crud e = new Crud();
+        e.Inicio();
+}
 }
