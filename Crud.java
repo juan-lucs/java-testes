@@ -32,11 +32,11 @@ public class Crud {
 
 
     private void Entrar() { 
-        System.out.println("Digite seu nome: ");
+        System.out.print("Digite seu nome: ");
         String nome = sc.nextLine();
+        boolean a = nomes.contains(nome);
         System.out.println("Digite sua senha: ");
         String senha = sc.nextLine();
-        boolean a = nomes.contains(nome);
         boolean b = senhas.contains(senha);
         if (a == true && b == true) {
             Dentro(nome, senha);
@@ -49,6 +49,7 @@ public class Crud {
     private void Dentro(String nome, String senha) {
         System.out.println("Entrou com sucesso! \n\n Caso queria sair aperte 1, caso queira alterar seu nome ou senha aperte 2 e caso querira deletar a conta aperte 3.");
             int h = sc.nextInt();
+            sc.nextLine();
             if (h == 1) {
                 Fechar();
             } else if (h == 2) {
@@ -85,9 +86,9 @@ public class Crud {
     }
 
     public  void Inicio() {
-        System.out.println("Digite 1 caso queira entrar na sua conta. \n\n Digite 2 para se registrar \n\n Digite 3 para sair.");
+        System.out.println("\n Digite 1 caso queira entrar na sua conta. \n\n Digite 2 para se registrar \n\n Digite 3 para sair.");
         int i = sc.nextInt();
-        
+        sc.nextLine();
         if (i == 1){
             Entrar();
         } else if (i == 2){
@@ -96,6 +97,7 @@ public class Crud {
             Fechar();
         } else {
             System.out.println("Seu idiota");
+            System.exit(0);
         }
         sc.close();
     }
