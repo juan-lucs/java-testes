@@ -17,6 +17,7 @@ public class Crud {
         boolean a = nomes.contains(nome);
         if (a == true) {
             System.out.println("Já existem usuários com esse nome!");
+            Inicio();
         } else {
             if (id.isEmpty() == true) {
                 id.add(0);
@@ -41,6 +42,7 @@ public class Crud {
             Dentro(nome, senha);
         } else {
             System.out.println("Nome ou senha incorretos");
+            Inicio();
         }
     }
 
@@ -55,6 +57,7 @@ public class Crud {
                 Deletar(nome, senha);
             } else{
                 System.out.println("Digite um numerp correto seu filha da puta");
+                Inicio();
             }
     }
 
@@ -81,7 +84,7 @@ public class Crud {
         System.exit(0);
     }
 
-    private void Inicio() {
+    public  void Inicio() {
         System.out.println("Digite 1 caso queira entrar na sua conta. \n\n Digite 2 para se registrar \n\n Digite 3 para sair.");
         int i = sc.nextInt();
         
@@ -91,6 +94,8 @@ public class Crud {
             Criar();
         } else if (i == 3) {
             Fechar();
+        } else {
+            System.out.println("Seu idiota");
         }
         sc.close();
     }
